@@ -7,8 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:tharwat_e_commerce/main.dart';
+import 'package:tharwat_e_commerce/fruit_hub_app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

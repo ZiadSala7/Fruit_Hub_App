@@ -1,0 +1,13 @@
+import 'package:flutter/material.dart';
+
+import '../../features/splash/presentation/views/splash_view.dart';
+
+Route<dynamic> onGenerateRoutes(RouteSettings settings) {
+  switch (settings.name) {
+    case SplashView.id:
+      return MaterialPageRoute(builder: (context) => SplashView());
+
+    default:
+      return MaterialPageRoute(builder: (context) => SizedBox());
+  }
+}
