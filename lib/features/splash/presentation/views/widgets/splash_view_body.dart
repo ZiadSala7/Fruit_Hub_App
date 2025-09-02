@@ -40,7 +40,6 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       children: [
         cnt >= 1
             ? fadeInChooser(
-                Duration(seconds: 1),
                 widget: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [SvgPicture.asset(AppImages.assetsImagesPlant)],
@@ -50,14 +49,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             : SizedBox(),
         cnt >= 2
             ? fadeInChooser(
-                Duration(seconds: 1),
                 widget: SvgPicture.asset(AppImages.assetsImagesLogo),
                 fadeInType: 'in',
               )
             : SizedBox(),
         cnt >= 1
             ? fadeInChooser(
-                Duration(seconds: 1),
                 widget: SvgPicture.asset(AppImages.assetsImagesSplashBottom),
                 fadeInType: 'in',
               )

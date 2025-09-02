@@ -1,33 +1,21 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/widgets.dart';
 
-fadeInChooser(
-  Duration? duration, {
+fadeInChooser({
   required Widget widget,
+  Duration duration = const Duration(seconds: 1),
   required String fadeInType,
 }) {
   switch (fadeInType) {
     case 'up':
-      return FadeInUp(
-        duration: duration ?? Duration(seconds: 1),
-        child: widget,
-      );
+      return FadeInUp(duration: duration, child: widget);
     case 'down':
-      return FadeInDown(
-        duration: duration ?? Duration(seconds: 1),
-        child: widget,
-      );
+      return FadeInDown(duration: duration, child: widget);
     case 'right':
-      return FadeInRight(
-        duration: duration ?? Duration(seconds: 1),
-        child: widget,
-      );
+      return FadeInRight(duration: duration, child: widget);
     case 'left':
-      return FadeInLeft(
-        duration: duration ?? Duration(seconds: 1),
-        child: widget,
-      );
+      return FadeInLeft(duration: duration, child: widget);
     default:
-      return FadeIn(duration: duration ?? Duration(seconds: 1), child: widget);
+      return FadeIn(duration: duration, child: widget);
   }
 }
