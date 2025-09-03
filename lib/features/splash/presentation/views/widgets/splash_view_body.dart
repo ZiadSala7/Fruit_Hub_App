@@ -23,7 +23,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       setState(() {});
       if (cnt == 4) {
         timer.cancel();
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => OnboardingView()),
         );
@@ -41,7 +41,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         cnt >= 1
             ? fadeInChooser(
                 widget: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [SvgPicture.asset(AppImages.assetsImagesPlant)],
                 ),
                 fadeInType: 'in',
