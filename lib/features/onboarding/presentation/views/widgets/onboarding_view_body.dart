@@ -23,12 +23,13 @@ class OnboardingViewBody extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyles.semiBold16.copyWith(fontFamily: fontFamily),
         ),
-        SizedBox(height: 65),
+        Spacer(),
         DotsIndicatorRow(model: model),
         SizedBox(height: 30),
         model.isLast
             ? CustomButton(title: 'ابدأ الان', onPressed: () {})
-            : SizedBox(),
+            : SizedBox(height: 51),
+        SizedBox(height: 50),
       ],
     );
   }

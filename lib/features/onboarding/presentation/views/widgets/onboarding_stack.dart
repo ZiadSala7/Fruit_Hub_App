@@ -33,7 +33,10 @@ class OnboardingStack extends StatelessWidget {
                   top: 50,
                   right: 20,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      onboardingPageIndex = 1;
+                      onboardingPageViewController.jumpToPage(1);
+                    },
                     child: Text(
                       'تخط',
                       style: TextStyles.regular13.copyWith(

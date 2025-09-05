@@ -14,8 +14,8 @@ class DotsIndicatorRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       spacing: 10,
       children: [
-        CustomDotIndicator(isActive: true),
         CustomDotIndicator(isActive: model.isLast ? true : false),
+        CustomDotIndicator(isActive: true),
       ],
     );
   }

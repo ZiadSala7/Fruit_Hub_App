@@ -57,7 +57,7 @@ List<OnboardingViewModel> onboardingModels = [
       style: TextStyles.bold23.copyWith(fontFamily: fontFamily),
     ),
     subTitle:
-        'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
+        'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة\n المثالية',
     isLast: true,
   ),
 ];
