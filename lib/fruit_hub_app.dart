@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tharwat_e_commerce/constants.dart';
+import 'package:tharwat_e_commerce/core/utils/app_colors.dart';
 
 import 'core/helper_functions/get_localization_delegates.dart';
 import 'core/helper_functions/on_generate_routes.dart';
@@ -11,6 +13,10 @@ class FruitHubApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: fontFamily,
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+      ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoutes,
       initialRoute: SplashView.id,

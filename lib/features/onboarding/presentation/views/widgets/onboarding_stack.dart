@@ -40,7 +40,6 @@ class OnboardingStack extends StatelessWidget {
                     child: Text(
                       'تخط',
                       style: TextStyles.regular13.copyWith(
-                        fontFamily: fontFamily,
                         color: AppColors.grayColor,
                       ),
                     ),

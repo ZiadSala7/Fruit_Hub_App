@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
@@ -26,10 +25,7 @@ class CustomButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 15),
           child: Text(
             title,
-            style: TextStyles.bold19.copyWith(
-              color: Colors.white,
-              fontFamily: fontFamily,
-            ),
+            style: TextStyles.bold19.copyWith(color: Colors.white),
           ),
         ),
       ),
