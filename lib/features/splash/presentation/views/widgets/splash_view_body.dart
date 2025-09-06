@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tharwat_e_commerce/core/services/shared_preferences_singleton.dart';
+import 'package:tharwat_e_commerce/features/auth/login/presentation/views/login_view.dart';
 import '../../../../../core/helper_functions/app_animations.dart';
 import '../../../../onboarding/presentation/views/onboarding_view.dart';
 
@@ -23,10 +25,15 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       setState(() {});
       if (cnt == 4) {
         timer.cancel();
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => OnboardingView()),
-        );
+        SharedPreferencesSingleton.getBool('isClicked')
+            ? Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginView()),
+              )
+            : Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => OnboardingView()),
+              );
       }
     });
     super.initState();

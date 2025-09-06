@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tharwat_e_commerce/core/services/shared_preferences_singleton.dart';
+import 'package:tharwat_e_commerce/features/auth/login/presentation/views/login_view.dart';
 import '../../../../../constants.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
@@ -27,7 +29,16 @@ class OnboardingViewBody extends StatelessWidget {
         DotsIndicatorRow(model: model),
         SizedBox(height: 30),
         model.isLast
-            ? CustomButton(title: 'ابدأ الان', onPressed: () {})
+            ? CustomButton(
+                title: 'ابدأ الان',
+                onPressed: () {
+                  SharedPreferencesSingleton.setBool('isClicked', true);
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginView()),
+                  );
+                },
+              )
             : SizedBox(height: 51),
         SizedBox(height: 50),
       ],
