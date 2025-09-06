@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../../../../core/widgets/custom_auth_appbar.dart';
+
+import 'widgets/sign_up_view_body.dart';
 
 class SignUpView extends StatelessWidget {
   static const String id = 'SignUpView';
@@ -6,6 +9,9 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: customAuthAppbar(context, 'حساب جديد'),
+      body: SignUpViewBody(),
+    );
   }
 }
