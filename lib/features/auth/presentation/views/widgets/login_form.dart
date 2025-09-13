@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../../core/widgets/custom_password_text_form_field.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
-class SignUpTextFormFieldSection extends StatelessWidget {
-  const SignUpTextFormFieldSection({super.key});
+class LoginForm extends StatelessWidget {
+  const LoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +15,9 @@ class SignUpTextFormFieldSection extends StatelessWidget {
           spacing: 16,
           children: [
             CustomTextFormField(
-              controller: TextEditingController(),
-              hintTxt: 'الاسم كامل :',
-            ),
-            CustomTextFormField(
-              controller: TextEditingController(),
               hintTxt: 'البريد الالكتروني :',
             ),
             CustomPasswordTextFormField(
-              controller: TextEditingController(),
               hintTxt: 'كلمة المرور :',
             ),
           ],

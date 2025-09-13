@@ -5,7 +5,7 @@ import '../../features/auth/presentation/cubit/register/register_cubit.dart';
 
 final getIt = GetIt.instance;
 
-void setUp() {
+void setUpGetIt() {
   getIt.registerSingleton<FirebaseAuthService>(FirebaseAuthService());
   getIt.registerSingleton<AuthRepoImplement>(
     AuthRepoImplement(firebaseAuthService: getIt<FirebaseAuthService>()),

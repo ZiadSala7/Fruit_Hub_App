@@ -5,7 +5,7 @@ import '../../data/repos/auth_repo_implement.dart';
 import '../cubit/register/register_cubit.dart';
 import '../../../../core/widgets/custom_auth_appbar.dart';
 
-import 'widgets/sign_up_view_body.dart';
+import 'widgets/sign_up_view_body_bloc_consumer.dart';
 
 class SignUpView extends StatelessWidget {
   static const String id = 'SignUpView';
@@ -17,7 +17,7 @@ class SignUpView extends StatelessWidget {
       create: (context) => RegisterCubit(repo: getIt<AuthRepoImplement>()),
       child: Scaffold(
         appBar: customAuthAppbar(context, 'حساب جديد'),
-        body: SignUpViewBody(),
+        body: SignUpViewBodyBlocConsumer(),
       ),
     );
   }

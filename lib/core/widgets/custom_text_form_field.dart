@@ -6,17 +6,19 @@ import '../utils/app_text_styles.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hintTxt;
-  final TextEditingController controller;
-  const CustomTextFormField({
-    super.key,
-    required this.hintTxt,
-    required this.controller,
-  });
+  final void Function(String?)? onSaved;
+  const CustomTextFormField({super.key, required this.hintTxt, this.onSaved});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: controller,
+      onSaved: onSaved,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return "هذا الجقل مطلوب";
+        }
+        return null;
+      },
       decoration: InputDecoration(
         fillColor: AppColors.filledGrey,
         filled: true,

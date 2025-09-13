@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tharwat_e_commerce/core/widgets/custom_button.dart';
 
 import '../../../../../core/widgets/custom_text_button.dart';
-import 'login_text_form_field_section.dart';
+import 'login_form.dart';
 import 'or_divider.dart';
 import 'sign_up_navigation_button.dart';
 import 'social_media_login_buttons.dart';
@@ -17,7 +17,7 @@ class LoginViewBody extends StatelessWidget {
         spacing: 16,
         children: [
           SizedBox(),
-          LoginTextFormFieldSection(),
+          LoginForm(),
           CustomTextButton(
             anlignment: Alignment.bottomLeft,
             onPressed: () {},

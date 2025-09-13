@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
+import '../models/user_model.dart';
 import '../../../../core/errors/custom_exception.dart';
 import '../../../../core/errors/failure.dart';
 import '../../../../core/services/firebase_auth_service.dart';
@@ -22,8 +23,8 @@ class AuthRepoImplement extends AuthRepo {
         email: email,
         password: password,
       );
-      var userEntity = UserEntity(name: name, email: email, uid: user.uid);
-      return right(userEntity);
+
+      return right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
       return left(ServerFailure(e.message));
     } catch (e) {
