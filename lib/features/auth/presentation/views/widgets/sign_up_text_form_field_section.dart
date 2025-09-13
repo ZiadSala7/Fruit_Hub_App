@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../core/widgets/custom_password_text_form_field.dart';
-import '../../../../../../core/widgets/custom_text_form_field.dart';
+import '../../../../../core/widgets/custom_password_text_form_field.dart';
+import '../../../../../core/widgets/custom_text_form_field.dart';
 
 class SignUpTextFormFieldSection extends StatelessWidget {
   const SignUpTextFormFieldSection({super.key});

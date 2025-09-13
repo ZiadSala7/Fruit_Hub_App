@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../core/utils/app_colors.dart';
-import '../../../../../../core/utils/app_text_styles.dart';
-import '../../../../../../core/widgets/custom_text_button.dart';
-import '../../../../login/presentation/views/login_view.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/widgets/custom_text_button.dart';
+import '../login_view.dart';
 
 class LoginNavigationButton extends StatelessWidget {
   const LoginNavigationButton({super.key});
@@ -19,7 +19,7 @@ class LoginNavigationButton extends StatelessWidget {
         ),
         CustomTextButton(
           onPressed: () {
-            Navigator.of(context).pushNamed(LoginView.id);
+            Navigator.of(context).pushReplacementNamed(LoginView.id);
           },
           title: 'تسجيل دخول',
         ),

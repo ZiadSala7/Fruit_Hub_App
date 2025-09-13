@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tharwat_e_commerce/core/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_button.dart';
 
 import 'login_navigation_button.dart';
 import 'sign_up_text_form_field_section.dart';

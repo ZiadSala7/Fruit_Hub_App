@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/widgets/custom_auth_appbar.dart';
+import '../../../../core/widgets/custom_auth_appbar.dart';
 import 'widgets/login_view_body.dart';
 
 class LoginView extends StatelessWidget {

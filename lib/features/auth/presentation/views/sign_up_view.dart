@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/widgets/custom_auth_appbar.dart';
+import '../../../../core/widgets/custom_auth_appbar.dart';
 
 import 'widgets/sign_up_view_body.dart';
 
