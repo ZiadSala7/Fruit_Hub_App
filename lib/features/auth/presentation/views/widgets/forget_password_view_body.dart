@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../otp_validation_view.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
@@ -26,7 +27,12 @@ class ForgetPasswordViewBody extends StatelessWidget {
               onSaved: (value) {},
             ),
             SizedBox(height: 35),
-            CustomButton(title: 'نسيت كلمة المرور', onPressed: () {}),
+            CustomButton(
+              title: 'نسيت كلمة المرور',
+              onPressed: () {
+                Navigator.of(context).pushNamed(OtpValidationView.id);
+              },
+            ),
           ],
         ),
       ),
