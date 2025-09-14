@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tharwat_e_commerce/core/widgets/custom_button.dart';
+import 'package:tharwat_e_commerce/features/auth/presentation/views/forget_password_view.dart';
 
 import '../../../../../core/widgets/custom_text_button.dart';
 import 'login_form.dart';
@@ -20,7 +21,9 @@ class LoginViewBody extends StatelessWidget {
           LoginForm(),
           CustomTextButton(
             anlignment: Alignment.bottomLeft,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(ForgetPasswordView.id);
+            },
             title: 'نسيت كلمة المرور؟',
           ),
           SizedBox(),

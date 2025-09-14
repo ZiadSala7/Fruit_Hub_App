@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "E:/flutter apps/tharwat_e_commerce/linux/runner"
+    "cmake.sourceDirectory": "E:/flutter apps/tharwat_e_commerce/linux/runner",
+    "editor.acceptSuggestionOnEnter": "on"
 }
