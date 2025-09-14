@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tharwat_e_commerce/features/auth/presentation/views/reset_password_view.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
-import '../../../../../core/widgets/build_pinput.dart';
 import '../../../../../core/widgets/custom_button.dart';
-import '../../../../../core/widgets/custom_text_button.dart';
+import '../../../../../core/widgets/custom_password_text_form_field.dart';
 
-class OtpValidationViewBody extends StatelessWidget {
-  const OtpValidationViewBody({super.key});
+class ResetPasswordViewBody extends StatelessWidget {
+  const ResetPasswordViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,23 +19,24 @@ class OtpValidationViewBody extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: Text(
-                'أدخل الرمز الذي أرسلناه إلى عنوان بريد email',
+                'قم بإنشاء كلمة مرور جديدة لتسجيل الدخول',
                 style: TextStyles.semiBold16.copyWith(
                   color: AppColors.grayColor,
                 ),
               ),
             ),
             SizedBox(height: 35),
-            buildPinPut(),
-            SizedBox(height: 35),
-            CustomButton(
-              title: 'تحقق من الرمز',
-              onPressed: () {
-                Navigator.of(context).pushNamed(ResetPasswordView.id);
-              },
+            CustomPasswordTextFormField(
+              hintTxt: 'أدخل كلمة مرور جديدة',
+              onSaved: (value) {},
             ),
-            SizedBox(height: 24),
-            CustomTextButton(onPressed: () {}, title: 'إعادة إرسال الرمز'),
+            SizedBox(height: 35),
+            CustomPasswordTextFormField(
+              hintTxt: 'أعد ادخال كلمة المرور ',
+              onSaved: (value) {},
+            ),
+            SizedBox(height: 35),
+            CustomButton(title: 'تحقق من الرمز', onPressed: () {}),
           ],
         ),
       ),
