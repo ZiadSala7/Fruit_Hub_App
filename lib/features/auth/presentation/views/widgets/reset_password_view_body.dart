@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_password_text_form_field.dart';
+import '../../../../../core/widgets/show_awesome_dialog.dart';
 
 class ResetPasswordViewBody extends StatelessWidget {
   const ResetPasswordViewBody({super.key});
@@ -20,9 +20,7 @@ class ResetPasswordViewBody extends StatelessWidget {
               alignment: Alignment.topRight,
               child: Text(
                 'قم بإنشاء كلمة مرور جديدة لتسجيل الدخول',
-                style: TextStyles.semiBold16.copyWith(
-                  color: AppColors.grayColor,
-                ),
+                style: TextStyles.semiBold16.copyWith(),
               ),
             ),
             SizedBox(height: 35),
@@ -36,7 +34,18 @@ class ResetPasswordViewBody extends StatelessWidget {
               onSaved: (value) {},
             ),
             SizedBox(height: 35),
-            CustomButton(title: 'تحقق من الرمز', onPressed: () {}),
+            CustomButton(
+              title: 'تحقق من الرمز',
+              onPressed: () {
+                showAwesomeDialog(
+                  context,
+                  'تمت المهمة بنجاح',
+                  'نم تغيير كلمة المرور الخاصة بك ',
+                  true,
+                  () {},
+                );
+              },
+            ),
           ],
         ),
       ),

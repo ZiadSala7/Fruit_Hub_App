@@ -82,6 +82,14 @@ class AppImages {
   /// assets/images/splash_bottom.svg
   static const String assetsImagesSplashBottom = "assets/images/splash_bottom.svg";
 
+  /// Assets for assetsImagesSuccess
+  /// assets/images/success.png
+  static const String assetsImagesSuccess = "assets/images/success.png";
+
+  /// Assets for assetsImagesSuccessReset
+  /// assets/images/successReset.svg
+  static const String assetsImagesSuccessReset = "assets/images/successReset.svg";
+
   /// Assets for assetsImagesTrash
   /// assets/images/trash.svg
   static const String assetsImagesTrash = "assets/images/trash.svg";

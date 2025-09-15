@@ -15,8 +15,7 @@ class LoginCubit extends Cubit<LoginStates> {
     required String password,
   }) async {
     emit(LoginLoading());
-    var response = await repo.createUserWithEmailAndPass(
-      name: name,
+    var response = await repo.loginWithEmailAndPass(
       email: email,
       password: password,
     );

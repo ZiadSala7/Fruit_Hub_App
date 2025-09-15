@@ -10,6 +10,7 @@ class RegisterCubit extends Cubit<RegisterStates> {
   final AuthRepoImplement repo;
   RegisterCubit({required this.repo}) : super(RegisterInitial());
 
+  bool areTermsAccepted = false;
   Future<void> createUserWithEmailAndPassword({
     required String name,
     required String email,
@@ -21,7 +22,7 @@ class RegisterCubit extends Cubit<RegisterStates> {
       email: email,
       password: password,
     );
-
+    
     response.fold(
       (failure) => emit(RegisterFailure(message: failure.message)),
       (userEntity) => emit(RegisterSuccess(user: userEntity)),

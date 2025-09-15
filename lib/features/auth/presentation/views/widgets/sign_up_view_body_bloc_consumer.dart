@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:tharwat_e_commerce/features/auth/presentation/views/login_view.dart';
 
+import '../../../../../core/widgets/show_awesome_dialog.dart';
 import '../../cubit/register/register_cubit.dart';
 import 'sign_up_view_body.dart';
 
@@ -13,9 +15,23 @@ class SignUpViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<RegisterCubit, RegisterStates>(
       listener: (context, state) {
         if (state is RegisterSuccess) {
-          ScaffoldMessenger.of(
+          showAwesomeDialog(
             context,
-          ).showSnackBar(SnackBar(content: Text('تهانينا لقد تم انشاء حساب')));
+            'تمت المهمة بنجاح',
+            'لقد أنشأت للتو حسابا جديدا',
+            true,
+            () {
+              Navigator.of(context).pushNamed(LoginView.id);
+            },
+          );
+        } else if (state is RegisterFailure) {
+          showAwesomeDialog(
+            context,
+            "فشلت العملية",
+            state.message,
+            false,
+            () {},
+          );
         }
       },
       builder: (context, state) {

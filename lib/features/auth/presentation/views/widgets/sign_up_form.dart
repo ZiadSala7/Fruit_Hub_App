@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_password_text_form_field.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
+import '../../../../../core/widgets/scaffold_messenger_builder.dart';
 import '../../cubit/register/register_cubit.dart';
 import 'terms_and_conditions.dart';
 
@@ -20,6 +21,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
   @override
   Widget build(BuildContext context) {
+    var cubit = BlocProvider.of<RegisterCubit>(context);
     late String name, password, email;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -53,11 +55,19 @@ class _SignUpFormState extends State<SignUpForm> {
               onPressed: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
-                  context.read<RegisterCubit>().createUserWithEmailAndPassword(
-                    name: name,
-                    email: email,
-                    password: password,
-                  );
+                  if (cubit.areTermsAccepted) {
+                    cubit.createUserWithEmailAndPassword(
+                      name: name,
+                      email: email,
+                      password: password,
+                    );
+                    
+                  } else {
+                    scaffoldMessengerBuilder(
+                      context,
+                      'تأكد أن جميع البيانات مكتملة',
+                    );
+                  }
                 } else {
                   setState(() {
                     autovalidateMode = AutovalidateMode.always;
