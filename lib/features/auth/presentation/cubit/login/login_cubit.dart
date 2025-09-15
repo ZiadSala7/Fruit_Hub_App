@@ -10,7 +10,6 @@ class LoginCubit extends Cubit<LoginStates> {
   LoginCubit({required this.repo}) : super(LoginInitial());
 
   Future<void> loginWithEmailAndPassword({
-    required String name,
     required String email,
     required String password,
   }) async {
