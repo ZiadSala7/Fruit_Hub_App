@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../cubit/login/login_cubit.dart';
 
 import '../../../../../core/utils/app_assets.dart';
 import 'social_login_button.dart';
@@ -8,6 +10,7 @@ class SocialMediaLoginButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var cubit = BlocProvider.of<LoginCubit>(context);
     return Padding(
       padding: EdgeInsetsGeometry.symmetric(horizontal: 17),
       child: SingleChildScrollView(
@@ -17,7 +20,7 @@ class SocialMediaLoginButtons extends StatelessWidget {
             SocialLoginButton(
               image: AppImages.assetsImagesGoogleIcon,
               title: 'تسجيل بواسطة جوجل',
-              onPressed: () {},
+              onPressed: () async => await cubit.loginWithGoogle(),
             ),
             SocialLoginButton(
               image: AppImages.assetsImagesApplIcon,

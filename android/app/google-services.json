@@ -12,7 +12,20 @@
           "package_name": "com.example.tharwat_e_commerce"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "626391545557-llj1dlpot7ms6gj7mnf7uu7g1r3kkh16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tharwat_e_commerce",
+            "certificate_hash": "3e782b2e1154b0abec44cc855260fb59836f99ac"
+          }
+        },
+        {
+          "client_id": "626391545557-kap9sok5n82s2btgl2em3pujj75o7897.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD2M4CPEss039bz8OlfRqzGey_N4kQnPdU"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626391545557-kap9sok5n82s2btgl2em3pujj75o7897.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "626391545557-d9rupghth1jjt9oaal7vck61scdvoc6l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tharwatECommerce"
+              }
+            }
+          ]
         }
       }
     }

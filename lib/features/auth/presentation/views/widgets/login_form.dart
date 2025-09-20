@@ -61,7 +61,6 @@ class _LoginFormState extends State<LoginForm> {
             onPressed: () {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
-
                 cubit.loginWithEmailAndPassword(
                   email: email,
                   password: password,
