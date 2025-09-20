@@ -33,3 +33,15 @@ final submittedPinTheme = defaultPinTheme.copyWith(
     color: Color.fromRGBO(234, 239, 243, 1),
   ),
 );
+
+List<String> get googleUserScopeHints {
+  return [
+    'email',
+    'https://www.googleapis.com/auth/userinfo.profile',
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/calendar',
+  ];
+}
+
+const String serverClientId =
+    "626391545557-kap9sok5n82s2btgl2em3pujj75o7897.apps.googleusercontent.com";
