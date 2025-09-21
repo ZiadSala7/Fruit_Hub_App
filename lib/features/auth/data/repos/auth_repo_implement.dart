@@ -66,4 +66,16 @@ class AuthRepoImplement extends AuthRepo {
       return left(ServerFailure('Error login with google: $e'));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> loginWithFacebook() async {
+    try {
+      var user = await firebaseAuthService.signInWithFacebook();
+      return right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      return left(ServerFailure('Error login with facebook: $e'));
+    } catch (e) {
+      return left(ServerFailure('Error login with facebook: $e'));
+    }
+  }
 }

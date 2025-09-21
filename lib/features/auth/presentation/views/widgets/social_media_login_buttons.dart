@@ -30,7 +30,7 @@ class SocialMediaLoginButtons extends StatelessWidget {
             SocialLoginButton(
               image: AppImages.assetsImagesFacebookIcon,
               title: 'تسجيل بواسطة فيسبوك',
-              onPressed: () {},
+              onPressed: () async => await cubit.loginWithFacebook(),
             ),
           ],
         ),

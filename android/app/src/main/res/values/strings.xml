@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">tharwat_e_commerce</string>
+
+    <!-- Facebook configs -->
+    <string name="facebook_app_id">1499644207893967</string>
+    <string name="facebook_client_token">5cfeaf00eca1279da1e35ab3c53e4e69</string>
+    <string name="fb_login_protocol_scheme">fb1499644207893967</string>
+</resources>
