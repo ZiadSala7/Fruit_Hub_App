@@ -1,4 +1,6 @@
 {
     "cmake.sourceDirectory": "E:/flutter apps/tharwat_e_commerce/linux/runner",
-    "editor.acceptSuggestionOnEnter": "on"
+    "editor.acceptSuggestionOnEnter": "on",
+    "workbench.colorTheme": "Dracula Theme",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }
